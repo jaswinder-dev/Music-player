@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MUSIC PLAYER</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="musicplayer.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <audio src=""></audio>
+      <div class="music_area initialPos">  <!--image and controls will be shown here -->
+                  <div class="top_bar">
+                    <i id="list_looped" title="list-looped" class="material-icons">repeat</i>
+                    <p>Now Playing</p>
+                    <span  id="openList" style="cursor:pointer;">&#9836;</span>
+                  </div>
+
+                  <div class="image_area">
+                    <img src="image2.jpg" alt="">
+                  </div>
+
+                  <div class="song_info">
+                    <p id="songName">Song Name</p>
+                    <p id="artistName">Artist Name</p>
+                  </div>
+
+                  <div class="progress_area">
+                    <div class="progress_bar"></div>
+                  </div>
+
+                  <div class="timer">
+                    <span id="current">0:00</span>
+                    <span id="total">3:40</span>
+                  </div>
+
+                  <div class="controls">
+                    <i id="prevButton" class="material-icons">skip_previous</i>
+                    <div class="play_pause">
+                         <i  id="playButton" class="fa fa-play"></i>
+                     </div>
+                    <i id="nextButton"  class="material-icons">skip_next</i>
+                  </div>
+      </div>
+
+      <div class="list_area hidden"><!--//list of songs will be shown here -->
+        <div class="header">
+                <div class="icons">
+                  <span>&#9836;</span>
+                  <p>Music List</p>
+                </div>
+                <span id="listClose" style="cursor:pointer;">&#10006;</span>
+        </div>
+
+        <div class="list">
+                <ul>
+                  <!-- ***************here songs will be added using javascript************** -->
+                </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="musiclist.js" charset="utf-8"></script>
+    <script src="music.js" charset="utf-8"></script>
+
+
+  </body>
+</html>
